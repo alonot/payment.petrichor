@@ -10,4 +10,16 @@ export const API = {
     events_apply_paid: backend_url + 'api/auth/events/apply/paid/',
     events_apply_free: backend_url + 'api/auth/events/apply/free/',
     whoami: backend_url + "api/auth/",
+    verifyCA: "https://pcap-back-production.up.railway.app/api/events/verify",
+}
+
+export async function POST(url: string, body: any) {
+    return await fetch(url, {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify(body)
+    })
 }
