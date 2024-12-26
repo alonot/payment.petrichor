@@ -21,12 +21,12 @@
     onMount(async () => {
 
 		await getData()
-		if (!$loggedIn || $invalidate) {
-			goto(`/login?to=/payment/check${$page.url.search}`);
-		}
-		if (data.id == null){
-			goto(`/`)
-		}
+		// if (!$loggedIn || $invalidate) {
+		// 	goto(`/login?to=/payment/check${$page.url.search}`);
+		// }
+		// if (data.id == null){
+		// 	goto(`/`)
+		// }
 		
 		fetchInfo()
 	});
@@ -35,15 +35,15 @@
 	function fetchInfo(){
 		// @ts-ignore
 		workshop = workshops[data.id]
-		if (!workshop || workshop == undefined){
-			goto('/')
-		}	
+		// if (!workshop || workshop == undefined){
+		// 	goto('/')
+		// }	
 	}
 	// @ts-ignore
 	workshop = workshops[data.id]
-	if (!workshop || workshop == undefined){
-		goto('/')
-	}
+	// if (!workshop || workshop == undefined){
+	// 	goto('/')
+	// }
 
 
 </script>
